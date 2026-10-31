@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Вхід до особистого кабінету інтернет-магазину квітів Bloom Flowers.">
+    <title>Вхід — Bloom Flowers</title>
+</head>
+<body>
+    <a href="#main-content">Перейти до основного вмісту</a>
+
+    <header>
+        <p>Доставка Києвом — 150 ₴ • Щодня з 09:00 до 20:00</p>
+        <p><strong>Bloom Flowers</strong></p>
+        <nav aria-label="Основна навігація">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="login.html">Вхід</a></li>
+                <li><a href="register.html">Реєстрація</a></li>
+                <li><a href="item-form.html">Замовити букет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h1>Вхід до особистого кабінету</h1>
+            <p>Будь ласка, введіть свої облікові дані для входу в систему.</p>
+
+            <!-- Використовуємо POST для передачі конфіденційних даних -->
+            <form action="/api/v1/auth/login" method="post">
+                <div>
+                    <label for="login-email">Електронна пошта</label>
+                    <input 
+                        id="login-email" 
+                        name="email" 
+                        type="email" 
+                        autocomplete="email" 
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="login-password">Пароль</label>
+                    <input 
+                        id="login-password" 
+                        name="password" 
+                        type="password" 
+                        autocomplete="current-password" 
+                        required
+                    >
+                </div>
+
+                <div>
+                    <button type="submit">Увійти</button>
+                </div>
+            </form>
+
+            <p>Ще не маєте акаунта? <a href="register.html">Зареєструватися</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bloom Flowers. Усі права захищено.</p>
+    </footer>
+</body>
+</html>
